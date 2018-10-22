@@ -1,3 +1,5 @@
+//Spencer Rosen
+
 import java.util.Iterator;
 
 /**
