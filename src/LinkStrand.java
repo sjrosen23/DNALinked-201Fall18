@@ -77,6 +77,15 @@ public class LinkStrand implements IDnaStrand {
 			count++;
 			current = current.next;
 		}
+		if(count==2){
+			StringBuilder s = new StringBuilder(current.next.info);
+			s.reverse();
+			toReturn.append(s.toString());
+			StringBuilder b = new StringBuilder(current.info);
+			b.reverse();
+			toReturn.append(b.toString());
+			return toReturn;
+		}
 		System.out.println("Count " + count);
 		for(int i = count; i> 1; i--){
 			current = myFirst;
