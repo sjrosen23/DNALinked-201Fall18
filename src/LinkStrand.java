@@ -77,14 +77,15 @@ public class LinkStrand implements IDnaStrand {
 			count++;
 			current = current.next;
 		}
-		current = myFirst;
 		for(int i = count; i> 0; i--){
+			current = myFirst;
 			for(int b = 0; b< count; b++){
 				if(mappy.get(current)== i){
 					StringBuilder s = new StringBuilder(current.info);
 					s.reverse();
 					toReturn.append(s.toString());
 				}
+				current = current.next;
 			}
 		}
 
