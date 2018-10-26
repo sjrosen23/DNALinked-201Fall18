@@ -82,7 +82,7 @@ public class LinkStrand implements IDnaStrand {
 			for(int b = 0; b< i; b++){
 				current = current.next;
 			}
-			System.out.println("current " + current);
+			System.out.println("current " + current.info);
 			StringBuilder s = new StringBuilder(current.info);
 			s.reverse();
 			toReturn.append(s.toString());
