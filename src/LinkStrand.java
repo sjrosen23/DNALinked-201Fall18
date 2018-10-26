@@ -97,7 +97,7 @@ public class LinkStrand implements IDnaStrand {
 				if(mappy.get(current)== i){
 					StringBuilder s = new StringBuilder(current.info);
 					s.reverse();
-					System.out.println("Appending " + s);
+					System.out.println("Appending " + s.toString());
 					toReturn.append(s.toString());
 					current = current.next;
 				}
