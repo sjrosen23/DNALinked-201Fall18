@@ -19,8 +19,8 @@ public class LinkStrand implements IDnaStrand {
 	}
 
 	public String toString(){
-		Node current = myFirst;
 		StringBuilder s = new StringBuilder("");
+		Node current = myFirst;
 		while(current!= null){
 			s.append(current.info);
 			current = current.next;
@@ -77,6 +77,7 @@ public class LinkStrand implements IDnaStrand {
 			count++;
 			current = current.next;
 		}
+		System.out.println("count " + count);
 		current = myFirst;
 		if(count==2){
 			StringBuilder s = new StringBuilder(current.next.info);
