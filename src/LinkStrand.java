@@ -81,7 +81,7 @@ public class LinkStrand implements IDnaStrand {
 		}
 		if(index<myIndex){
 			myIndex = 0;
-			current = myFirst;
+			temp = myFirst;
 			myLocalIndex = 0;
 		}
 		while(counter != index){
