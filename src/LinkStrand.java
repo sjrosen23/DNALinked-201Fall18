@@ -75,6 +75,7 @@ public class LinkStrand implements IDnaStrand {
 	@Override
 	public char charAt(int index) throws IndexOutOfBoundsException{
 		Node temp = current;
+		int counter = myIndex;
 		if(index>=mySize || index<0){
 			throw new IndexOutOfBoundsException("Invalid index");
 		}
@@ -83,14 +84,15 @@ public class LinkStrand implements IDnaStrand {
 			current = myFirst;
 			myLocalIndex = 0;
 		}
-		while(myIndex != index){
-			myIndex++;
+		while(counter != index){
+			counter++;
 			myLocalIndex++;
 			if(myLocalIndex >= temp.info.length()){
 				myLocalIndex= 0;
 				temp = current.next;
 			}
 		}
+		myIndex = counter;
 		current = temp;
 		return temp.info.charAt(myLocalIndex);
 	}
