@@ -84,6 +84,7 @@ public class LinkStrand implements IDnaStrand {
 				if(mappy.get(current.next) == i){
 						Node temp = current.next;
 						current.next = current.next.next;
+						myFirst = myFirst.next;
 						myLast.next = temp;
 						StringBuilder s = new StringBuilder(temp.info);
 						s.reverse();
