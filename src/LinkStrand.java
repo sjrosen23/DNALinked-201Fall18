@@ -79,7 +79,7 @@ public class LinkStrand implements IDnaStrand {
 		if(index>=mySize || index<0){
 			throw new IndexOutOfBoundsException("Invalid index");
 		}
-		else if(index<myIndex){
+		if(index<myIndex){
 			myIndex = 0;
 			current = myFirst;
 			myLocalIndex = 0;
