@@ -80,8 +80,8 @@ public class LinkStrand implements IDnaStrand {
 		for(int i = count; i>0; i--){
 			current = myFirst;
 			for(int b = 0; b<count; b++){
+				if(i != count){
 				if(mappy.get(current.next) == i){
-					if(i != count){
 						Node temp = current.next;
 						current.next = current.next.next;
 						myLast.next = temp;
