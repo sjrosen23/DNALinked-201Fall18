@@ -93,15 +93,13 @@ public class LinkStrand implements IDnaStrand {
 		for(int i = count; i> 0; i--){
 			System.out.println("run Through");
 			current = myFirst;
-			for(int b = 0; b< count; b++){
-				if(mappy.get(current)== i){
-					StringBuilder s = new StringBuilder(current.info);
-					s.reverse();
-					System.out.println("Appending " + s.toString());
-					toReturn.append(s.toString());
-					current = current.next;
-				}
+			for(int b = 0; b< i; b++){
+				current = current.next;
 			}
+			StringBuilder s = new StringBuilder(current.info);
+			s.reverse();
+			System.out.println("Appending " + s.toString());
+			toReturn.append(s.toString());
 		}
 		System.out.println("Returning " + toReturn.toString());
 
