@@ -77,7 +77,6 @@ public class LinkStrand implements IDnaStrand {
 			count++;
 			current = current.next;
 		}
-		System.out.println("count " + count);
 		current = myFirst;
 		if(count==2){
 			StringBuilder s = new StringBuilder(current.next.info);
@@ -90,6 +89,7 @@ public class LinkStrand implements IDnaStrand {
 			toReturn.append(b.toString());
 			return toReturn;
 		}
+		System.out.println("count " + count);
 		for(int i = count; i> 1; i--){
 			System.out.println("run Through");
 			current = myFirst;
@@ -99,8 +99,8 @@ public class LinkStrand implements IDnaStrand {
 					s.reverse();
 					System.out.println("Appending " + s);
 					toReturn.append(s.toString());
+					current = current.next;
 				}
-				current = current.next;
 			}
 		}
 		System.out.println("Returning " + toReturn.toString());
