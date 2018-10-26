@@ -77,6 +77,7 @@ public class LinkStrand implements IDnaStrand {
 			count++;
 			current = current.next;
 		}
+		current = myFirst;
 		if(count==2){
 			StringBuilder s = new StringBuilder(current.next.info);
 			s.reverse();
