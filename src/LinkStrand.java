@@ -74,11 +74,11 @@ public class LinkStrand implements IDnaStrand {
 		while(current.next!= null){
 			mappy.put(current, count);
 			count++;
+			current = current.next;
 		}
 		
-		int counter = 0;
-		current = myFirst;
 		for(int i = count; i>0; i--){
+			current = myFirst;
 			for(int b = 0; b<count; b++){
 				if(mappy.get(current.next) == i){
 					if(i != count){
@@ -88,6 +88,7 @@ public class LinkStrand implements IDnaStrand {
 						temp.next = null;
 					}
 				}
+				current = current.next;
 			}
 		}
 		
