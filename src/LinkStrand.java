@@ -62,6 +62,7 @@ public class LinkStrand implements IDnaStrand {
 
 	@Override
 	public IDnaStrand reverse() {
+		System.out.println("start " + toString());
 		HashMap<Node, Integer> mappy = new HashMap<Node,Integer>();
 		LinkStrand toReturn = new LinkStrand();
 		current = myFirst;
@@ -76,17 +77,20 @@ public class LinkStrand implements IDnaStrand {
 			count++;
 			current = current.next;
 		}
+		System.out.println(count);
+
 		current = myFirst;
 		for(int i = count; i> 0; i--){
 			current = myFirst;
 			for(int b = 0; b< i; b++){
 				current = current.next;
 			}
-			System.out.println("current " + current.info);
 			StringBuilder s = new StringBuilder(current.info);
+			System.out.println("Appending " + s.toString());
 			s.reverse();
 			toReturn.append(s.toString());
 		}
+		System.out.println("Returning " + toReturn.toString());
 
 		return toReturn;
 	}
