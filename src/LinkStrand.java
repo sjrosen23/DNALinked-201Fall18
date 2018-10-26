@@ -72,20 +72,12 @@ public class LinkStrand implements IDnaStrand {
 			s.reverse();
 			return new LinkStrand(s.toString());
 		}
+		
 		while(current.next!= null){
 			mappy.put(current, count);
 			count++;
 			current = current.next;
 		}
-		System.out.println(count);
-		if(count == 2){
-			StringBuilder s = new StringBuilder(current.next.info);
-			s.reverse();
-			StringBuilder b = new StringBuilder(current.info);
-			b.reverse();
-			return new LinkStrand(s.toString()+b.toString());
-		}
-
 		current = myFirst;
 		for(int i = count; i> 0; i--){
 			current = myFirst;
