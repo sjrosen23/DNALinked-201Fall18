@@ -37,7 +37,6 @@ public interface IDnaStrand extends Iterable<Character>{
 				first = false;
 			} else {
 				ret.append(search.substring(start, pos));
-
 			}
 			start = pos + enzyme.length();
 			ret.append(splicee);
