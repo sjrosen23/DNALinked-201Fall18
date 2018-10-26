@@ -143,7 +143,6 @@ public class TestStrand {
 			test.append(strs[i]);
 		}
 		String all = test.toString();
-		System.out.println(test.toString());
 		Iterator<Character> itc = test.iterator();
 		for (int i = 0; i < all.length(); i++) {
 			assertTrue("next at "+i+" of "+all.length(),itc.hasNext());
