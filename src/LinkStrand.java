@@ -1,8 +1,8 @@
 import java.util.Iterator;
 
 public class LinkStrand implements IDnaStrand {
-	String myInfo; 
-	int myAppends;
+	private String myInfo; 
+	private int myAppends;
 	private int myIndex;
 	private Node myFirst,myLast;
 	private long mySize;
@@ -76,26 +76,26 @@ public class LinkStrand implements IDnaStrand {
 
 	@Override
 	public char charAt(int index) throws IndexOutOfBoundsException{
+		Node temp = current;
+		int counter = myIndex;
 		if(index>=mySize || index<0){
 			throw new IndexOutOfBoundsException("Invalid index");
 		}
-		if(index<myIndex){
+		else if(index<myIndex){
 			myIndex = 0;
 			current = myFirst;
 			myLocalIndex = 0;
 		}
-		int counter = myIndex;
-		Node temp = current;
 		while(counter != index){
 			counter++;
 			myLocalIndex++;
-			if(myLocalIndex == current.info.length()){
+			if(myLocalIndex == temp.info.length()){
 				myLocalIndex= 0;
-				current = current.next;
+				temp = current.next;
 			}
 		}
-		current = temp;
 		myIndex = counter;
+		current = temp;
 		System.out.println(temp.info.charAt(myLocalIndex));
 		return temp.info.charAt(myLocalIndex);
 	}
