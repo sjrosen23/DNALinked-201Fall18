@@ -90,10 +90,10 @@ public class LinkStrand implements IDnaStrand {
 			return toReturn;
 		}
 		System.out.println("count " + count);
-		for(int i = count; i> 1; i--){
+		for(int i = count; i> 0; i--){
 			System.out.println("run Through");
 			current = myFirst;
-			for(int b = 1; b< count; b++){
+			for(int b = 0; b< count; b++){
 				if(mappy.get(current)== i){
 					StringBuilder s = new StringBuilder(current.info);
 					s.reverse();
