@@ -89,9 +89,7 @@ public class LinkStrand implements IDnaStrand {
 			s.reverse();
 			toReturn.append(s.toString());
 		}
-		StringBuilder fin = new StringBuilder(current.next.info);
-		fin.reverse();
-		toReturn.append(fin.toString());
+
 		System.out.println("Returning " + toReturn.toString());
 
 		return toReturn;
