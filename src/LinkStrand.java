@@ -87,8 +87,8 @@ public class LinkStrand implements IDnaStrand {
 			toReturn.append(b.toString());
 			return toReturn;
 		}
-		System.out.println("Count " + count);
 		for(int i = count; i> 1; i--){
+			System.out.println("run Through");
 			current = myFirst;
 			for(int b = 1; b< count; b++){
 				if(mappy.get(current)== i){
