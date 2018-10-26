@@ -16,6 +16,7 @@ public class CodonProfiler {
 		HashMap<String,Integer> map = new HashMap<>();
 		int[] ret = new int[codons.length];
 				
+		for(int k=0; k < codons.length; k++) {
 			Iterator<Character> iter = strand.iterator();
 			while (iter.hasNext()) {
 				char a = iter.next();
@@ -31,6 +32,7 @@ public class CodonProfiler {
 				if (cod.equals(codons[k])) {
 					ret[k] += 1;
 				}
+			}
 		}
 		return ret;
 	}
