@@ -80,9 +80,9 @@ public class LinkStrand implements IDnaStrand {
 		System.out.println(count);
 
 		current = myFirst;
-		for(int i = count; i> 0; i--){
+		for(int i = count; i> 1; i--){
 			current = myFirst;
-			for(int b = 0; b< i; b++){
+			for(int b = 1; b< i; b++){
 				current = current.next;
 			}
 			StringBuilder s = new StringBuilder(current.info);
