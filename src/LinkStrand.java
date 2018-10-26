@@ -96,7 +96,6 @@ public class LinkStrand implements IDnaStrand {
 		}
 		myIndex = counter;
 		current = temp;
-		System.out.println(temp.info.charAt(myLocalIndex));
 		return temp.info.charAt(myLocalIndex);
 	}
 
