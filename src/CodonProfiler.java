@@ -37,7 +37,7 @@ public class CodonProfiler {
 		}
 		for(int i =0; i<codons.length;i++){
 			if(map.get(codons[i])!= null){
-				ret[i] = map.get(codons);
+				ret[i] = map.get(codons[i]);
 			}
 			else{
 				ret[i] = 0;
