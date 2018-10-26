@@ -80,9 +80,11 @@ public class LinkStrand implements IDnaStrand {
 		current = myFirst;
 		if(count==2){
 			StringBuilder s = new StringBuilder(current.next.info);
+			System.out.println("first " + s);
 			s.reverse();
 			toReturn.append(s.toString());
 			StringBuilder b = new StringBuilder(current.info);
+			System.out.println("second " + s);
 			b.reverse();
 			toReturn.append(b.toString());
 			return toReturn;
