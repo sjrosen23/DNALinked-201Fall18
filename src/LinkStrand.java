@@ -66,7 +66,7 @@ public class LinkStrand implements IDnaStrand {
 		HashMap<Node, Integer> mappy = new HashMap<Node,Integer>();
 		LinkStrand toReturn = new LinkStrand();
 		current = myFirst;
-		int count = 1;
+		int count = 0;
 		if(current.next== null){
 			StringBuilder s = new StringBuilder(current.info);
 			s.reverse();
@@ -87,9 +87,9 @@ public class LinkStrand implements IDnaStrand {
 		}
 
 		current = myFirst;
-		for(int i = count; i> 1; i--){
+		for(int i = count; i> 0; i--){
 			current = myFirst;
-			for(int b = 1; b< i; b++){
+			for(int b = 0; b< i; b++){
 				current = current.next;
 			}
 			StringBuilder s = new StringBuilder(current.info);
